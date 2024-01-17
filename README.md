@@ -18,7 +18,8 @@ In an era of constant professional evolution, SkillVista stands at the intersect
 ![Screenshot 2024-01-17 192952](https://github.com/muin-s/TemaX/assets/75922386/3cafa83b-cbe4-4b03-990f-8409a556367b)
 ![Screenshot 2024-01-17 193006](https://github.com/muin-s/TemaX/assets/75922386/8988d365-733e-40bb-842f-28b219118a3e)
 
-![Uploading Screenshot 2024-01-17 193511.png…]()
+
+![Screenshot 2024-01-17 193511](https://github.com/muin-s/TemaX/assets/75922386/d8dc57eb-8c9b-4925-9ef7-7bbb98096c95)
 
 Key Features:
 
