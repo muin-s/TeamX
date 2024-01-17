@@ -10,16 +10,9 @@ class TaskExpSkill implements Arrayable
     protected $usedSkill;
     protected $usedWithTask;
 
-    public function toArray() {
-
-        $output = [];
-
-        foreach ( get_class_vars(get_class($this)) as $propName => $propDefaultValue ) {
-            $output[ $propName ] = $this->{$propName};
-        }
-
-        return $output;
-
+    public function toArray()
+    {
+        return get_object_vars($this);
     }
 
     /**
@@ -33,12 +26,12 @@ class TaskExpSkill implements Arrayable
     /**
      * Set the value of usageWeightPct
      *
+     * @param  float  $usageWeightPct
      * @return  self
      */ 
     public function setUsageWeightPct($usageWeightPct)
     {
         $this->usageWeightPct = $usageWeightPct;
-
         return $this;
     }
 
@@ -53,12 +46,12 @@ class TaskExpSkill implements Arrayable
     /**
      * Set the value of usedSkill
      *
+     * @param  string  $usedSkill
      * @return  self
      */ 
     public function setUsedSkill($usedSkill)
     {
         $this->usedSkill = $usedSkill;
-
         return $this;
     }
 
@@ -73,12 +66,12 @@ class TaskExpSkill implements Arrayable
     /**
      * Set the value of usedWithTask
      *
+     * @param  string  $usedWithTask
      * @return  self
      */ 
     public function setUsedWithTask($usedWithTask)
     {
         $this->usedWithTask = $usedWithTask;
-
         return $this;
     }
 }
