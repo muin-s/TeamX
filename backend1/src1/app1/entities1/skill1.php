@@ -3,129 +3,54 @@
 namespace App\Entities1;
 
 use Illuminate\Contracts\Support\Arrayable;
-use App\Entities1\User1;
 
-class JobPosting1 implements Arrayable
+const TOOL_SKILL_TYPE = 0;
+const PERSONAL_INTERNAL_SKILL_TYPE = 1;
+const PERSONAL_EXTERNAL_SKILL_TYPE = 2;
+const LANGUAGE_SKILL_TYPE = 3;
+const OTHER_SKILL_TYPE = 4;
+const VALID_SKILL_TYPES = [TOOL_SKILL_TYPE, PERSONAL_INTERNAL_SKILL_TYPE, PERSONAL_EXTERNAL_SKILL_TYPE, LANGUAGE_SKILL_TYPE, OTHER_SKILL_TYPE];
+
+class Skill1 implements Arrayable
 {
     protected $id;
-    protected $jobTitle;
-    protected $employer;
-    protected $extLink;
+    protected $name;
+    protected $explainer;
+    protected $type;
+    protected $fixedCase;
+    protected $category;
+    protected $ownerUser;
     protected $createdTime;
     protected $updatedTime;
-    protected $postedDate;
-    protected $appliedDate;
-    protected $deadlineDate;
-    protected $earliestFeedbackDate;
-    protected $earliestStartingDate;
-    protected $locationPostalCode;
-    protected $locationCity;
-    protected $contactName;
-    protected $contactJobTitle;
-    protected $contactDetails;
-    protected $contentRaw;
+
+    public function toArray()
+    {
+        return get_object_vars($this);
+    }
 
     /**
-     * The User that has recorded this job posting
+     * Get the value of type
+     */ 
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set the value of type
      *
-     * @var User1 $ownerUser
-     */
-    protected $ownerUser;
+     * @return  self
+     */ 
+    public function setType($type)
+    {
+        if (!in_array($type, VALID_SKILL_TYPES)) {
+            throw new \TypeError('Skill type ' . $type . ' is not valid. Valid types are id: ' . implode(', ', VALID_SKILL_TYPES));
+        }
+
+        $this->type = $type;
+
+        return $this;
+    }
 
     // ... (rest of your existing methods)
-
-    // Additional improvements:
-    // - Renamed contact_job_title to contactJobTitle for consistency.
-    // - Made use of consistent camelCase naming conventions.
-    // - Improved method comments for better clarity.
-
-    /**
-     * Get the value of contactJobTitle.
-     */
-    public function getContactJobTitle()
-    {
-        return $this->contactJobTitle;
-    }
-
-    /**
-     * Set the value of contactJobTitle.
-     *
-     * @param mixed $contactJobTitle
-     *
-     * @return self
-     */
-    public function setContactJobTitle($contactJobTitle)
-    {
-        $this->contactJobTitle = $contactJobTitle;
-
-        return $this;
-    }
-
-    // ... (rest of your existing getters and setters)
-
-    /**
-     * Get the value of earliestFeedbackDate.
-     */
-    public function getEarliestFeedbackDate()
-    {
-        return $this->earliestFeedbackDate;
-    }
-
-    /**
-     * Set the value of earliestFeedbackDate.
-     *
-     * @param mixed $earliestFeedbackDate
-     *
-     * @return self
-     */
-    public function setEarliestFeedbackDate($earliestFeedbackDate)
-    {
-        $this->earliestFeedbackDate = $earliestFeedbackDate;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of earliestStartingDate.
-     */
-    public function getEarliestStartingDate()
-    {
-        return $this->earliestStartingDate;
-    }
-
-    /**
-     * Set the value of earliestStartingDate.
-     *
-     * @param mixed $earliestStartingDate
-     *
-     * @return self
-     */
-    public function setEarliestStartingDate($earliestStartingDate)
-    {
-        $this->earliestStartingDate = $earliestStartingDate;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of appliedDate.
-     */
-    public function getAppliedDate()
-    {
-        return $this->appliedDate;
-    }
-
-    /**
-     * Set the value of appliedDate.
-     *
-     * @param mixed $appliedDate
-     *
-     * @return self
-     */
-    public function setAppliedDate($appliedDate)
-    {
-        $this->appliedDate = $appliedDate;
-
-        return $this;
-    }
 }
