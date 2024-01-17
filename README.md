@@ -6,6 +6,9 @@ Welcome to SkillVista GitHub Repository!
 
 
 In an era of constant professional evolution, SkillVista stands at the intersection of innovative technology and personalized career development. Leveraging the power of conversational and generative chatbots, our project is designed to empower individuals to enhance their workplace performance, explore growth opportunities in their respective fields, and ultimately pave the way to fulfilling career prospects.
+![Screenshot 2024-01-17 193357](https://github.com/muin-s/TemaX/assets/75922386/7e0d86db-9e2d-4e8e-b2b5-257a752e3e8d)
+
+
 ![Screenshot 2024-01-17 191248](https://github.com/muin-s/TemaX/assets/75922386/90806b00-d2a9-4889-9b56-2f91985951c8)
 
 
@@ -14,6 +17,9 @@ In an era of constant professional evolution, SkillVista stands at the intersect
 
 ![Screenshot 2024-01-17 192952](https://github.com/muin-s/TemaX/assets/75922386/3cafa83b-cbe4-4b03-990f-8409a556367b)
 ![Screenshot 2024-01-17 193006](https://github.com/muin-s/TemaX/assets/75922386/8988d365-733e-40bb-842f-28b219118a3e)
+
+![Uploading Screenshot 2024-01-17 193511.png…]()
+
 Key Features:
 
 Personalized Guidance: SkillVista engages users in meaningful conversations, understanding their unique strengths, aspirations, and area's
