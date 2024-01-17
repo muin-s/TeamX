@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Entities;
+namespace App\Entities1;
 
 use Illuminate\Contracts\Support\Arrayable;
-use App\Entities\User;
+use App\Entities1\User1;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
-class JobExperience implements Arrayable
+class JobExperience1 implements Arrayable
 {
 
     protected $id;
@@ -28,7 +28,7 @@ class JobExperience implements Arrayable
     /**
      * The User that owns that has this job experience
      *
-     * @var User
+     * @var User1
      */
     protected $ownerUser;
 
@@ -135,7 +135,7 @@ class JobExperience implements Arrayable
     /**
      * Get the User that owns that has this job experience
      *
-     * @return  User
+     * @return  User1
      */ 
     public function getOwnerUser()
     {
@@ -145,11 +145,11 @@ class JobExperience implements Arrayable
     /**
      * Set the User that owns that has this job experience
      *
-     * @param  User  $ownerUser  The User that owns that has this job experience
+     * @param  User1  $ownerUser  The User that owns that has this job experience
      *
      * @return  self
      */ 
-    public function setOwnerUser(User $ownerUser)
+    public function setOwnerUser(User1 $ownerUser)
     {
         $this->ownerUser = $ownerUser;
 
@@ -196,7 +196,7 @@ class JobExperience implements Arrayable
         return $this;
     }
 
-    public function addTask(Task $task)
+    public function addTask(Task1 $task)
     {
         if( !$this->performedTasks->contains($task) ) {
             $task->setPerformedInJobExperience($this);
@@ -204,7 +204,7 @@ class JobExperience implements Arrayable
         }
     }
 
-    public function removeTask(Task $task)
+    public function removeTask(Task1 $task)
     {
         $this->performedTasks->removeElement($task);
         $task->getPerformedInJobExperience( null );
