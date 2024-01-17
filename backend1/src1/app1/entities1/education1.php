@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Entities;
+namespace App\Entities1;
 
 use App\Models\User;
 
 use Illuminate\Contracts\Support\Arrayable;
 
-class Education implements Arrayable
+class Education1 implements Arrayable
 {
     protected $id;
     protected $name;
