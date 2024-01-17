@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Console;
+namespace App\Console1;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
-class Kernel extends ConsoleKernel
+class CommandKernel1 extends ConsoleKernel
 {
     /**
      * Artisan commands registered by the application.
